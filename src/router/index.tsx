@@ -1,6 +1,6 @@
 import { RecoilRoot } from "recoil"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { ProtectedRoute } from "./ProtectedRoute";
+// import { ProtectedRoute } from "./ProtectedRoute";
 
 
 
@@ -13,9 +13,9 @@ export const Router = () => {
         <RecoilRoot>
             <BrowserRouter>
                 <Routes>
-                    <Route path="/login"/>
+                    <Route  path="/"/>
                     <Route path="/register"/>
-                    <Route element={<ProtectedRoute />}/>
+                    {/* <Route element={<ProtectedRoute />}/> */}
                 </Routes>            
             </BrowserRouter>
         </RecoilRoot>
