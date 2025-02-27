@@ -1,33 +1,29 @@
-import IssuerNavbar from "../features/dashboard/components/IssuerNavbar";
+import DashboardWrapper from "../features/dashboard/components/DashboardWrapper";
+import StatsWidget from "../features/dashboard/components/StatsWidget";
+import ActivityLog from "../features/dashboard/components/ActivityLog";
+import Charts from "../features/dashboard/components/Chart";
+import dashboardDataJson from "../features/dashboard/data/dashboardData.json";
 
-function IssuerDashboard() {
+const IssuerDashboard = () => {
   return (
-    <div className="h-screen bg-gray-100">
-      {/* Issuer Navbar */}
-      <IssuerNavbar />
-
-      {/* Dashboard Content */}
-      <div className="p-6">
-        <h2 className="text-xl font-semibold">Track the certificates you have issued.</h2>
-
-        <div className="grid grid-cols-2 gap-6 mt-6">
-          {/* Issued Certificates */}
-          <div className="bg-white p-6 rounded-lg shadow">
-            <h3 className="text-xl font-semibold">Certificates Issued</h3>
-            <p className="text-3xl font-bold">200</p>
-          </div>
-
-          {/* Pending Approvals */}
-          <div className="bg-white p-6 rounded-lg shadow">
-            <h3 className="text-xl font-semibold">Pending Approvals</h3>
-            <p className="text-3xl font-bold">10</p>
-          </div>
-
-          {/* Add Charts & More Features Here */}
-        </div>
+    <DashboardWrapper title="Issuer Dashboard">
+      {/* Stats Widgets */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+        <StatsWidget title="Certificates Issued" count={dashboardDataJson.certificatesIssued} />
+        <StatsWidget title="Certificates Received" count={dashboardDataJson.certificatesReceived} />
       </div>
-    </div>
+
+      {/* Activity Log */}
+      <div className="mt-6">
+        <ActivityLog logs={dashboardDataJson.activityLogs} />
+      </div>
+
+      {/* Charts Section */}
+      <div className="mt-6">
+        <Charts data={dashboardDataJson.charts} />
+      </div>
+    </DashboardWrapper>
   );
-}
+};
 
 export default IssuerDashboard;

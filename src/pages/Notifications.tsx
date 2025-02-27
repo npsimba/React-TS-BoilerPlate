@@ -1,9 +1,12 @@
+import PageWrapper from "../features/dashboard/components/PageWrapper";
+
 const Notifications = () => {
-    return (
-      <div className="p-6">
-        <h1 className="text-2xl font-bold">Notifications</h1>
-        <p>View your notifications here.</p>
-      </div>
-    );
-  };
-  export default Notifications;
+  return (
+    <PageWrapper title="Notifications" description="View system notifications and updates.">
+      <h2 className="text-lg font-semibold">Recent Notifications</h2>
+      <p className="text-gray-500">No new notifications.</p>
+    </PageWrapper>
+  );
+};
+
+export default Notifications;

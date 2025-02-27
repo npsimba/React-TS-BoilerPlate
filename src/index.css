@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+.dark {
+    background-color: #111827; /* Dark mode background */
+    color: white;
+  }
+  
+  .dark * {
+    transition: all 0.3s ease-in-out;
+  }
+  

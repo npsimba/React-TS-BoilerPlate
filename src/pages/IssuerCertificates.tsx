@@ -1,12 +1,12 @@
+import PageWrapper from "../features/dashboard/components/PageWrapper";
+
 const IssuerCertificates = () => {
-    return (
-      <div className="p-6">
-        <h1 className="text-2xl font-semibold">Issued Certificates</h1>
-        <p>View and manage the certificates you have issued.</p>
-        {/* Add table or list of issued certificates here */}
-      </div>
-    );
-  };
-  
-  export default IssuerCertificates;
-  
+  return (
+    <PageWrapper title="Issuer Certificates" description="Manage certificates issued by you.">
+      <h2 className="text-lg font-semibold">Issued Certificates</h2>
+      <p className="text-gray-500">No certificates have been issued yet.</p>
+    </PageWrapper>
+  );
+};
+
+export default IssuerCertificates;

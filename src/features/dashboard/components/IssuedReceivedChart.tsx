@@ -1,9 +1,5 @@
 import { PieChart, Pie, Cell, Tooltip } from "recharts";
-
-interface IssuedReceivedData {
-  name: string;
-  value: number;
-}
+import { IssuedReceivedData } from "@/types/types"; 
 
 interface IssuedReceivedChartProps {
   data: IssuedReceivedData[];

@@ -1,12 +1,12 @@
+import PageWrapper from "../features/dashboard/components/PageWrapper";
+
 const IssuerApprovals = () => {
-    return (
-      <div className="p-6">
-        <h1 className="text-2xl font-semibold">Pending Approvals</h1>
-        <p>Review and approve certificate requests.</p>
-        {/* Add pending approval requests list here */}
-      </div>
-    );
-  };
-  
-  export default IssuerApprovals;
-  
+  return (
+    <PageWrapper title="Issuer Approvals" description="Approve or reject certificate requests.">
+      <h2 className="text-lg font-semibold">Pending Approvals</h2>
+      <p className="text-gray-500">No pending approvals at the moment.</p>
+    </PageWrapper>
+  );
+};
+
+export default IssuerApprovals;

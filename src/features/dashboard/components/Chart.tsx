@@ -1,7 +1,7 @@
 import IssuedReceivedChart from "./IssuedReceivedChart";
 import CategoryDistributionChart from "./CategoryDistributionChart";
 import IssuedOverTimeChart from "./IssuedOverTimeChart";
-import { IssuedReceivedData, CategoryDistributionData, IssuedOverTimeData, ChartsProps } from "";  
+import { ChartsProps } from "@/types/types";  
 
 const Charts: React.FC<ChartsProps> = ({ data }) => {
   return (
@@ -12,5 +12,6 @@ const Charts: React.FC<ChartsProps> = ({ data }) => {
     </div>
   );
 };
+
 
 export default Charts;
